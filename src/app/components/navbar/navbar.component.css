@@ -1,0 +1,14 @@
+#navText {
+  margin-right: 4px;
+}
+
+/* Dropdown item styles */
+a.dropdown-item {
+  cursor: pointer;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  background-color: #C2BEBE;
+}
+
+
