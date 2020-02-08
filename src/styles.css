@@ -13,32 +13,6 @@ i.btn {
   cursor: pointer;
 }
 
-.btn.btn-primary:hover:enabled {
-  font-weight: 500;
-  background: #8DA242 !important;
-}
-
-body.bg {
-  /*background: white !important;*/
-  /*background: linear-gradient(to right, #ebebeb, white);*/
-  /*background: linear-gradient(to right, #00b09b, #96c93d);*/
-  /*background: linear-gradient(to right, #76b852, #8dc26f); */
-  /*background: linear-gradient(to right, #11998e, #38ef7d); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
-  /*background: linear-gradient(to right, #56ab2f, #92c35d); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
-  /*background: linear-gradient(to right, #f79d00, #64f38c); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
-  /*background-color: #11998e;*/
-  /*background-color: #f0f0f0;*/
-
-  /*background-image: url("~assets/images/Green-Nature-Macro-Ginkgo-Foliage-2560-x-1600.jpg");*/
-  /*background-position: center; !* Center the image *!*/
-  /*background-repeat: no-repeat; !* Do not repeat the image *!*/
-  /*background-size: cover; !* Resize the background image to cover the entire container *!*/
-  /*min-height: 100%;*/
-  /*background-image: url("/assets/images/Green-Nature-Macro-Ginkgo-Foliage-2560-x-1600.jpg");*/
-  background-color: #EDF2DC;
-  background-position: center; /* Center the image */
-}
-
 body {
   /*Choose Poppins or Candara*/
   font-family: Poppins, sans-serif !important;
@@ -65,8 +39,13 @@ body {
 }
 
 .btn-primary {
-  background: #A7BC5B !important;
-  border-color: #A7BC5B !important;
+  background: #888 !important;
+  border: none;
+}
+
+/* TODO, does not work yet, border color is not changing onclick */
+.btn-primary:active {
+  border-color: #FD6154 !important;
 }
 
 .page-container {

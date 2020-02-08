@@ -11,4 +11,7 @@ a.dropdown-item {
   background-color: #C2BEBE;
 }
 
-
+ /* Override bootstrap default styles */
+.fixed-top {
+  position: relative;
+}
