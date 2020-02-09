@@ -4,39 +4,51 @@
       <div class="card-group custom-border-shadow">
         <div class="card p-4">
           <div class="card-body">
-            <form name="form" #formElement="ngForm" (ngSubmit)="onLogin()">
+            <form name="form" #formElement="ngForm" (ngSubmit)="onRegister()">
               <div class="logo">
                 <img src="../../../assets/images/bugicon.png" width="40x" height="40px"
                      alt="logo" class="logo">
               </div>
-              <h1 style="text-align:center" class="login-title">Log in</h1>
+              <h1 style="text-align:center" class="login-title">Register</h1>
 
-              <label for="Email" class="form-label">Email address</label>
+              <label for="email" class="form-label">Email address</label>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="icon-user"></i></span>
                 </div>
                 <input
                   type="text"
-                  name="Email"
-                  id="Email"
+                  name="email"
+                  id="email"
                   class="form-control sty1"
                   placeholder="name@company.com"
-                  [(ngModel)]="emailInput"
                   required>
               </div>
-              <label for="Password" class="form-label">Password</label>
-              <div class="input-group mb-4">
+              <label for="password" class="form-label">Password</label>
+              <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="icon-lock"></i></span>
                 </div>
                 <input
                   type="password"
-                  name="Password"
-                  id="Password"
+                  name="password"
+                  id="password"
                   class="form-control"
                   placeholder="Password"
-                  [(ngModel)]="passwordInput"
+                  autocomplete="new-password"
+                  required>
+              </div>
+              <label for="passwordCheck" class="form-label">Confirm password</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="icon-lock"></i></span>
+                </div>
+                <input
+                  type="password"
+                  name="passwordCheck"
+                  id="passwordCheck"
+                  class="form-control"
+                  placeholder="Confirm password"
                   required>
               </div>
               <!--              <div>-->
@@ -44,12 +56,17 @@
               <!--                  {{this.sessionService.errorMessage}}-->
               <!--                </p>-->
               <!--              </div>-->
-              <button class="btn btn-primary float-right px-4">Log in</button>
-              <button type="button" routerLink="/forgot-password" class="btn btn-link px-0">Forgot password?</button>
+              <div class="row">
+                <div class="col-md-12">
+                  <button class="btn btn-primary float-right px-4">Register</button>
+                </div>
+              </div>
+
+              <!--              <button type="button" routerLink="/forgot-password" class="btn btn-link px-0">Forgot password?</button>-->
             </form>
             <div class="row">
               <div class="col-md-12">
-                <p class="sign-up-text"> Don't have an account? <a routerLink="/register"> Sign up </a></p>
+                <p class="sign-up-text"> Already have an account? <a routerLink="/login">Log in</a></p>
               </div>
             </div>
           </div>

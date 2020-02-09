@@ -2,6 +2,11 @@
   margin-right: 4px;
 }
 
+span#navText {
+  outline: none;
+  cursor: pointer;
+}
+
 /* Dropdown item styles */
 a.dropdown-item {
   cursor: pointer;
@@ -11,7 +16,7 @@ a.dropdown-item {
   background-color: #C2BEBE;
 }
 
- /* Override bootstrap default styles */
+/* Override bootstrap default styles */
 .fixed-top {
   position: relative;
 }
