@@ -8,6 +8,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { OverviewComponent } from './components/overview/overview.component';
 import { LoginComponent } from './components/login/login.component';
 import {FormsModule} from '@angular/forms';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {FormsModule} from '@angular/forms';
     PageNotFoundComponent,
     OverviewComponent,
     LoginComponent,
+    ForgotPasswordComponent,
   ],
   imports: [
     BrowserModule,
