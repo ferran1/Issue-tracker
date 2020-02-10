@@ -1,6 +1,6 @@
 # Bug tracker
 
-Bug tracking software created in Angular 8 frontenda and Java Spring boot backend 
+Bug tracking software created in Angular 8 frontend and Java Spring boot backend 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.24.
 
 ## Development server
