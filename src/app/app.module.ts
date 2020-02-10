@@ -11,6 +11,7 @@ import {FormsModule} from '@angular/forms';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HomeComponent } from './components/home/home.component';
     ForgotPasswordComponent,
     RegisterComponent,
     HomeComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
