@@ -4,40 +4,59 @@
       <div class="card-group custom-border-shadow">
         <div class="card p-4">
           <div class="card-body">
-            <form name="form" #formElement="ngForm" (ngSubmit)="onRegister()">
+            <form name="form" autocomplete="off" #formElement="ngForm" (ngSubmit)="onRegister()">
               <div class="logo">
                 <img src="../../../assets/images/bugicon.png" width="40x" height="40px"
                      alt="logo" class="logo">
               </div>
               <h1 style="text-align:center" class="login-title">Register</h1>
 
-              <label for="email" class="form-label">Email address</label>
+              <label for="Email" class="form-label">Email address</label>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="icon-user"></i></span>
                 </div>
                 <input
                   type="text"
-                  name="email"
-                  id="email"
-                  class="form-control sty1"
+                  name="Email"
+                  id="Email"
+                  class="form-control"
+                  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
                   placeholder="name@company.com"
+                  #email="ngModel"
+                  ngModel
                   required>
               </div>
-              <label for="password" class="form-label">Password</label>
-              <div class="input-group mb-3">
+              <div style="color: red" [hidden]="email.valid || email.untouched">
+                <div *ngIf="email.errors && email.errors.required">
+                  <p><span>Email is required</span></p>
+                </div>
+                <div *ngIf="email.errors && email.errors.pattern">
+                  <p><span>Email is invalid</span></p>
+                </div>
+              </div>
+
+              <label for="Password" class="form-label">Password</label>
+              <div class="input-group mb-4">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="icon-lock"></i></span>
                 </div>
                 <input
+                  minlength="6"
                   type="password"
-                  name="password"
-                  id="password"
+                  name="Password"
+                  id="Password"
+                  autocomplete="new-password"
                   class="form-control"
                   placeholder="Password"
-                  autocomplete="new-password"
+                  #password="ngModel"
+                  ngModel
                   required>
               </div>
+              <div style="color: red" *ngIf="!password.valid && password.touched">
+                <p><span>Please enter a valid password (Password should contain at least 6 characters)</span></p>
+              </div>
+
               <label for="passwordCheck" class="form-label">Confirm password</label>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -49,13 +68,10 @@
                   id="passwordCheck"
                   class="form-control"
                   placeholder="Confirm password"
+                  ngModel
                   required>
               </div>
-              <!--              <div>-->
-              <!--                <p *ngIf="this.sessionService.errorMessage" style="color:#E92626;font-size:20px;font-weight:normal" class="success">-->
-              <!--                  {{this.sessionService.errorMessage}}-->
-              <!--                </p>-->
-              <!--              </div>-->
+
               <div class="row">
                 <div class="col-md-12">
                   <button class="btn btn-primary float-right px-4">Register</button>

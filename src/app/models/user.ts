@@ -11,7 +11,7 @@ export class User {
   private _isAdmin: boolean;
   private _projects?: Project[] = [];
 
-  constructor(email: string, password: string, isAdmin: boolean, projects: Project[]) {
+  constructor(email: string, password: string, isAdmin: boolean, projects?: Project[]) {
     this._email = email;
     this._password = password;
     this._isAdmin = isAdmin;

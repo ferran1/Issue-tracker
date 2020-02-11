@@ -1,4 +1,6 @@
 .profile-title {
+  font-family: 'Enriqueta', arial, serif; line-height: 1.25;
+  font-size: 40px; font-weight: bold;
   text-align: center;
   margin-top: 40px;
 }
