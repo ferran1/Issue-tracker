@@ -1,6 +1,6 @@
 # Bug tracker
 
-Bug tracking software created in Angular 8 frontend and Java Spring boot backend. 
+Bug tracking software created in Angular 8 frontend and pring boot backend. 
 
 ## Development server
 
