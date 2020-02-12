@@ -12,7 +12,7 @@ import {ProfileComponent} from './components/profile/profile.component';
  * Defines all the routes of the application
  */
 const routes: Routes = [
-  {path: '', redirectTo: 'overview', pathMatch: 'full'},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
   {
     path: 'home', component: HomeComponent
   },

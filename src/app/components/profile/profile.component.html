@@ -1,13 +1,38 @@
 <div class="container">
-  <div class="content">
+
+  <div class="title-content">
     <div class="row">
       <div class="col-md-12">
-        <h1 class="profile-title"> My profile </h1>
-
+        <h1 class="profile-title"> Profile settings </h1>
       </div>
     </div>
   </div>
 
+  <div class="profile-content">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="sub-header">My profile</p>
+      </div>
+      <div class="col-md-12">
+        <div class="avatar">
+          <img src="../../../assets/images/defaultavatar.png" alt="avatar" class="avatar">
+        </div>
+        <p class="name"> {{ tempUser.firstName }} {{ tempUser.surName }} </p>
+        <p class="email"> {{ tempUser.email }} </p>
+      </div>
+    </div>
+
+    <div class="edit-profile-content" id="edit-profile-header">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="sub-header">
+            Edit profile
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 

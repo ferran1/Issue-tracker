@@ -14,11 +14,11 @@ export class ProfileComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    let project1 = new Project("Test1", new User("Test@gmail.com", "test", false), Status.ACTIVE, new Date());
-    let project2 = new Project("Test2", new User("Test@gmail.com", "test", false), Status.ACTIVE, new Date());
+    let project1 = new Project("Test1", new User("Test@gmail.com",  "test", "Johnny", "Petron", false), Status.ACTIVE, new Date());
+    let project2 = new Project("Test2", new User("Test@gmail.com", "test", "Maarten" , "de Boer" , false), Status.ACTIVE, new Date());
     let projects = [project1, project2];
 
-    this.tempUser = new User("name@example.com", "test", false, projects);
+    this.tempUser = new User("david@company.com", "test", "David", "Smith" ,false, projects);
   }
 
 }
