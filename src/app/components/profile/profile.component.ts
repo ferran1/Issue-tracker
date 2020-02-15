@@ -9,16 +9,29 @@ import {Project, Status} from '../../models/project';
 })
 export class ProfileComponent implements OnInit {
 
-  tempUser: User;
+  private _user: User;
+  private _userCopy: User;
 
   constructor() { }
+
+  onSave(){
+
+  }
 
   ngOnInit() {
     let project1 = new Project("Test1", new User("Test@gmail.com",  "test", "Johnny", "Petron", false), Status.ACTIVE, new Date());
     let project2 = new Project("Test2", new User("Test@gmail.com", "test", "Maarten" , "de Boer" , false), Status.ACTIVE, new Date());
     let projects = [project1, project2];
 
-    this.tempUser = new User("david@company.com", "test", "David", "Smith" ,false, projects);
+    this._user = new User("david@company.com", "test", "David", "Smith" ,false, projects);
+    this._userCopy = this.user;
   }
 
+  get user(): User {
+    return this._user;
+  }
+
+  get userCopy(): User {
+    return this._userCopy;
+  }
 }

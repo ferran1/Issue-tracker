@@ -17,17 +17,74 @@
         <div class="avatar">
           <img src="../../../assets/images/defaultavatar.png" alt="avatar" class="avatar">
         </div>
-        <p class="name"> {{ tempUser.firstName }} {{ tempUser.surName }} </p>
-        <p class="email"> {{ tempUser.email }} </p>
+        <p class="name"> {{ _user.firstName }} {{ _user.surName }} </p>
+        <p class="email"> {{ _user.email }} </p>
       </div>
     </div>
 
     <div class="edit-profile-content" id="edit-profile-header">
       <div class="row">
         <div class="col-md-12">
-          <p class="sub-header">
+          <p class="sub-header-2">
             Edit profile
           </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <form name="editForm" #myProfile="ngForm" (ngSubmit)="onSave()">
+            <div class="row">
+            <div class="col-md-6">
+              <label for="firstName"> First name </label>
+              <input
+                [value]="userCopy.firstName"
+                type="text"
+                name="surName"
+                id="surName"
+                class="form-control input-sm"
+                required>
+            </div>
+              <div class="col-md-6">
+                <label for="surName" id="surName-label"> Surname </label>
+                <input
+                  [value]="userCopy.surName"
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                  class="form-control input-sm"
+                  required>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-md-6">
+            <div class="form-group">
+              <label for="email"> Email </label>
+              <input
+                [value]="userCopy.email"
+                type="text"
+                name="email"
+                id="email"
+                class="form-control sty1"
+                required>
+            </div>
+            </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="phoneNumber"> Phone number </label>
+                  <input
+                    type="text"
+                    name="phoneNumber"
+                    placeholder="+0123456789"
+                    id="phoneNumber"
+                    class="form-control sty1"
+                    required>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <button type="button" class="main-button" style="float: right">Save changes</button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
