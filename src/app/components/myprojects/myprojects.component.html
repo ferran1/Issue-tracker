@@ -1,0 +1,78 @@
+<div class="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+
+        <!--        <p class="sub-header">My projects </p>-->
+        <!--        <h3>My projects</h3>-->
+
+        <select name="selectProjectType" id="selectProjectType" class="custom-select" style="cursor: pointer">
+          <option value="allprojects">All projects</option>
+          <option value="completedprojects">Completed projects</option>
+          <option value="deletedprojects">Deleted projects</option>
+        </select>
+        <!--      <select name="organisationSelectBox" id="selectOrg" class="custom-select" style="cursor: pointer"-->
+        <!--              (change)="orgSelectionChanged()"-->
+        <!--              [(ngModel)]="this.currentSelectedOrg">-->
+        <!--        <option *ngFor="let organisation of this.userOrganisations" [ngValue]="organisation">-->
+        <!--          {{organisation.name}}</option>-->
+        <!--      </select>-->
+
+      </div>
+    </div>
+
+    <table class="table">
+      <thead class="thead-light">
+      <tr>
+        <th scope="col">Project Name</th>
+        <th scope="col">Status</th>
+        <th scope="col">Owner</th>
+        <th scope="col">Amount of members</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let project of projects">
+        <td>{{ project.name }}</td>
+        <td>{{ project.status }}</td>
+        <td>{{ project.owner.email }}</td>
+        <td>{{ amountOfMembers }}</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <h1 class="new-project-title"> New project </h1>
+
+      <div class="col-md-12">
+        <form name="createProjectForm" #myProfile="ngForm" (ngSubmit)="onCreateProject()">
+          <div class="row">
+            <div class="col-md-6">
+              <label for="projectName"> Project Name </label>
+              <input
+                type="text"
+                name="projectName"
+                id="projectName"
+                class="form-control input-sm"
+                required>
+            </div>
+            <div class="col-md-6">
+              <label for="status" id="status-label"> Status </label>
+              <select name="status" id="status" class="custom-select" style="cursor: pointer">
+                <option value="active">Active</option>
+                <option value="onschedule">On schedule</option>
+                <option value="delayed">Delayed</option>
+                <option value="beingtested">Being tested</option>
+                <option value="onhold">On hold</option>
+                <option value="completed">Completed</option>
+              </select>
+            </div>
+            <div class="col-md-12">
+              <p class="invite-members">Invite members</p>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+

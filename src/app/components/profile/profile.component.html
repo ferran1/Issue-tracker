@@ -87,8 +87,41 @@
           </form>
         </div>
       </div>
-    </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="sub-header-2">
+            Change password
+          </p>
+        </div>
+      </div>
 
+      <!-- TODO: create password visibility toggle next to both of these inputs -->
+      <div class="row">
+        <div class="col-md-6">
+          <label for="currentPassword"> Current Password </label>
+          <input
+            type="password"
+            placeholder="Password"
+            name="currentPassword"
+            id="currentPassword"
+            class="form-control input-sm"
+            required>
+        </div>
+        <div class="col-md-6">
+          <label for="newPassword"> New Password </label>
+          <input
+            type="password"
+            placeholder="Password"
+            name="newPassword"
+            id="newPassword"
+            class="form-control input-sm"
+            required>
+        </div>
+        <div class="col-md-12">
+          <button type="button" class="main-button" style="float: right">Save changes</button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

@@ -6,7 +6,9 @@
   margin-left: 5px;
 }
 
-.
+.navbar-brand {
+  font-size: 19px;
+}
 
 span#navText {
   outline: none;

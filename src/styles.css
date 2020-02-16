@@ -17,7 +17,6 @@ body {
   /*Choose Poppins or Candara*/
   font-family: Poppins, sans-serif !important;
   min-height: 100%;
-
 }
 
 .main-button{
@@ -40,6 +39,15 @@ body {
 
 .main-button:active {
   box-shadow: inset 1px 1px 1px #DFDFDF;
+}
+
+input {
+  font-size: 0.9rem !important;
+}
+
+/* TODO Change font size of input placeholder to 0.9rem */
+input::placeholder {
+  font-size: 0.9rem;
 }
 
 .page-container {

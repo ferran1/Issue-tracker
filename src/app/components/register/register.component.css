@@ -16,6 +16,18 @@
   text-align: center;
 }
 
+.register-title {
+  font-size: 26px;
+}
+
+label.form-label {
+  font-size: 0.9rem;
+}
+
+.sign-up-text {
+  font-size: 0.9rem;
+}
+
 /* TODO: When form inputs are invalid, input borders should be coloured red */
 /*.ng-invalid:not(form){*/
 /*  border-left: 5px solid #a94442;*/
