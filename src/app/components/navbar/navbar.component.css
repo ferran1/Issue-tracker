@@ -29,6 +29,10 @@ a.dropdown-item {
   position: relative;
 }
 
+#navText {
+  margin-right: 4px;
+}
+
 div#navbarSupportedContent {
   transition: 0.5s !important;
 }
