@@ -1,4 +1,80 @@
 .profile-title {
-  text-align: center;
-  margin-top: 40px;
+  font-family: 'Enriqueta', arial, serif; line-height: 1.25;
+  font-size: 16px; font-weight: bold;
+  padding: 10px;
+  margin-bottom: 0px;
+  margin-left: 10px;
 }
+
+.title-content {
+  margin-top: 20px;
+  background-color: #fafafa;
+  border: 1px solid #d3d3d3;
+}
+
+.profile-content {
+  border: 1px solid #d3d3d3;
+  position: relative;
+  padding: 10px;
+}
+
+.sub-header {
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.sub-header-2 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#edit-profile-header {
+  margin-top: 20px;
+}
+
+.edit-profile-content {
+  padding: 10px;
+  position: relative;
+}
+
+.avatar {
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+  margin-left: 5px;
+}
+
+.name {
+  position: absolute;
+  top: 4px;
+  left: 110px;
+  font-weight: bold;
+}
+
+.email {
+  position: absolute;
+  top: 35px;
+  left: 110px;
+}
+
+/*input#searchInput {*/
+/*  width: 90px !important;*/
+/*}*/
+
+p {
+  font-size: 0.9rem;
+}
+
+label {
+  font-size: 0.9rem;
+}
+
+input {
+  margin-bottom: 1rem;
+}
+
+
+
+
+

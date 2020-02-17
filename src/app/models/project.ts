@@ -24,7 +24,7 @@ export class Project {
   private _members?: User[] = [];
   private _bugs: Bug[] = [];
 
-  constructor(name: string, owner: User, status: string, dateCompleted: Date, members: User[], bugs: Bug[]) {
+  constructor(name: string, owner: User, status: string, dateCompleted: Date, members?: User[], bugs?: Bug[]) {
     this._name = name;
     this._owner = owner;
     this._status = status;

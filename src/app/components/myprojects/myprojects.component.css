@@ -1,0 +1,77 @@
+.my-projects-content {
+  padding: 20px;
+}
+
+.sub-header {
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#selectProjectType {
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+}
+
+.project-content {
+  margin-top: 20px;
+}
+
+#create-project {
+  float: right;
+}
+
+.new-project-title {
+  font-family: 'Enriqueta', arial, serif; line-height: 1.25;
+  font-size: 20px; font-weight: bold;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.new-project-content {
+  border: 1px solid #d3d3d3;
+  position: relative;
+  padding: 10px;
+}
+
+.invite-members {
+  margin-top: 10px;
+}
+
+#create-project {
+  margin-bottom: 20px;
+}
+
+#searchFilter {
+  width: 30%;
+}
+
+#invite-button {
+  float: right;
+  margin-top: 3px;
+}
+
+select {
+  font-size: 0.9rem;
+}
+
+input {
+  font-size: 0.9rem;
+}
+
+label {
+  font-size: 15px;
+}
+
+p {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+th {
+  font-size: 15px;
+}
+
+td {
+  font-size: 0.9rem;
+}

@@ -2,6 +2,14 @@
   margin-right: 4px;
 }
 
+#registerButton {
+  margin-left: 5px;
+}
+
+.navbar-brand {
+  font-size: 19px;
+}
+
 span#navText {
   outline: none;
   cursor: pointer;
@@ -19,4 +27,12 @@ a.dropdown-item {
 /* Override bootstrap default styles */
 .fixed-top {
   position: relative;
+}
+
+#navText {
+  margin-right: 4px;
+}
+
+div#navbarSupportedContent {
+  transition: 0.5s !important;
 }

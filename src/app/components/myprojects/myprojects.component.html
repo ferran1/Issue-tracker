@@ -1,0 +1,100 @@
+<div class="my-projects-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+
+        <select name="selectProjectType" id="selectProjectType" class="custom-select" style="cursor: pointer">
+          <option value="allprojects">All projects</option>
+          <option value="completedprojects">Completed projects</option>
+          <option value="deletedprojects">Deleted projects</option>
+        </select>
+        <!--      <select name="organisationSelectBox" id="selectOrg" class="custom-select" style="cursor: pointer"-->
+        <!--              (change)="orgSelectionChanged()"-->
+        <!--              [(ngModel)]="this.currentSelectedOrg">-->
+        <!--        <option *ngFor="let organisation of this.userOrganisations" [ngValue]="organisation">-->
+        <!--          {{organisation.name}}</option>-->
+        <!--      </select>-->
+      </div>
+
+      <div class="col-md-9">
+        <input id="searchFilter" placeholder="Search project" type="text" class="form-control">
+      </div>
+<!--        <input id="searchFilter" type="text" class="form-control" [(ngModel)]="searchFilter"-->
+<!--               (ngModelChange)="checkIfListEmpty()">-->
+
+    </div>
+
+    <table class="table">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">Project Name</th>
+        <th scope="col">Status</th>
+        <th scope="col">Owner</th>
+        <th scope="col">Amount of members</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let project of projects">
+        <td>{{ project.name }}</td>
+        <td>{{ project.status }}</td>
+        <td>{{ project.owner.email }}</td>
+        <td>{{ amountOfMembers }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="new-project-content">
+  <div class="container">
+    <div class="row">
+      <h1 class="new-project-title"> New project </h1>
+
+      <div class="col-md-12">
+        <form name="createProjectForm" #myProfile="ngForm" (ngSubmit)="onCreateProject()">
+          <div class="row">
+            <div class="col-md-6">
+              <label for="projectName"> Project Name </label>
+              <input
+                type="text"
+                name="projectName"
+                id="projectName"
+                class="form-control input-sm"
+                required>
+            </div>
+            <div class="col-md-6">
+              <label for="status" id="status-label"> Status </label>
+              <select name="status" id="status" class="custom-select" style="cursor: pointer">
+                <option value="active">Active</option>
+                <option value="onschedule">On schedule</option>
+                <option value="delayed">Delayed</option>
+                <option value="beingtested">Being tested</option>
+                <option value="onhold">On hold</option>
+                <option value="completed">Completed</option>
+              </select>
+            </div>
+            <div class="col-md-12">
+              <p class="invite-members">Invite members</p>
+            </div>
+            <div class="col-md-5">
+              <input
+                type="text"
+                name="invite"
+                id="invite-input"
+                class="form-control input-sm"
+                placeholder="email@example.com"
+                required>
+            </div>
+            <div class="col-md-1">
+            <button type="button" class="main-button" id="invite-button"> Invite </button>
+            </div>
+            <div class="col-md-6">
+              <button type="button" class="main-button" id="create-project">Create project</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+

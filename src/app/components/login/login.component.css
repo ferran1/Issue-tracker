@@ -1,5 +1,6 @@
 .login-title {
   margin-bottom: 20px;
+  font-size: 26px;
 }
 
 .form-label {
@@ -10,8 +11,19 @@
 .sign-up-text {
   margin-top: 15px;
   text-align: center;
+  font-size: 0.9rem;
 }
 
 .logo {
   text-align: center;
 }
+
+#forgot-password {
+  font-size: 0.9rem;
+}
+
+label.form-label {
+  font-size: 0.9rem;
+}
+
+

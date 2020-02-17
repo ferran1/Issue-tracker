@@ -17,35 +17,37 @@ body {
   /*Choose Poppins or Candara*/
   font-family: Poppins, sans-serif !important;
   min-height: 100%;
-
 }
 
-.text-green-primary {
+.main-button{
+  color: #444444;
+  background: #F3F3F3;
+  border: 1px #DADADA solid;
+  padding: 5px 10px;
+  border-radius: 2px;
   font-weight: bold;
-  color: #A7BC5B !important;
+  font-size: 9pt;
+  outline: none;
 }
 
-.text-green-secondary {
-  font-weight: bold;
-  color: #8DA242 !important;
+.main-button:hover {
+  border: 1px #C6C6C6 solid;
+  box-shadow: 1px 1px 1px #EAEAEA;
+  color: #333333;
+  background: #F7F7F7;
 }
 
-.bg-green-primary {
-  background-color: #A7BC5B !important;
+.main-button:active {
+  box-shadow: inset 1px 1px 1px #DFDFDF;
 }
 
-.bg-green-secondary {
-  background-color: #8DA242 !important;
+input {
+  font-size: 0.9rem !important;
 }
 
-.btn-primary {
-  background: #888 !important;
-  border: none;
-}
-
-/* TODO, does not work yet, border color is not changing onclick */
-.btn-primary:active {
-  border-color: #FD6154 !important;
+/* TODO Change font size of input placeholder to 0.9rem */
+input::placeholder {
+  font-size: 0.9rem;
 }
 
 .page-container {

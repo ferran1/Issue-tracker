@@ -7,17 +7,21 @@ import {ForgotPasswordComponent} from './components/forgot-password/forgot-passw
 import {RegisterComponent} from './components/register/register.component';
 import {HomeComponent} from './components/home/home.component';
 import {ProfileComponent} from './components/profile/profile.component';
+import {MyprojectsComponent} from './components/myprojects/myprojects.component';
 
 /**
  * Defines all the routes of the application
  */
 const routes: Routes = [
-  {path: '', redirectTo: 'overview', pathMatch: 'full'},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
   {
     path: 'home', component: HomeComponent
   },
   {
     path: 'overview', component: OverviewComponent
+  },
+  {
+    path: 'myprojects', component: MyprojectsComponent
   },
   {
     path: 'login', component: LoginComponent
