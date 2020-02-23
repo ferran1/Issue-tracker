@@ -14,7 +14,7 @@ export class ForgotPasswordComponent implements OnInit {
     this.isValidCredentials = true;
   }
 
-  onResetPassword(){
+  private onResetPassword(){
     /* Logic to check if the email exists in the application*/
 
     // let exists = 0;
@@ -45,7 +45,7 @@ export class ForgotPasswordComponent implements OnInit {
   }
 
   //When the user types in the email, save it in the email instance variable
-  inputChanged(email: string) {
+  private inputChanged(email: string) {
     this.email = email;
   }
 

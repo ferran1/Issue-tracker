@@ -13,6 +13,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { MyprojectsComponent } from './components/myprojects/myprojects.component';
+import { ProjectComponent } from './components/project/project.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { MyprojectsComponent } from './components/myprojects/myprojects.componen
     HomeComponent,
     ProfileComponent,
     MyprojectsComponent,
+    ProjectComponent,
   ],
   imports: [
     BrowserModule,

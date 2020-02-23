@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
   private emailInput: string;
   private passwordInput: string;
 
-  onLogin() {
+  private onLogin() {
     console.log("Method has been called after form submit");
   }
 

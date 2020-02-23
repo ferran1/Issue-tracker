@@ -14,7 +14,7 @@ export class ProfileComponent implements OnInit {
 
   constructor() { }
 
-  onSave(){
+  private onSave(){
 
   }
 

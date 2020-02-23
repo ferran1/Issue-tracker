@@ -60,18 +60,19 @@ input {
 }
 
 label {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 p {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
 }
 
 th {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 td {
   font-size: 0.9rem;
+  cursor: pointer;
 }

@@ -8,6 +8,7 @@ import {RegisterComponent} from './components/register/register.component';
 import {HomeComponent} from './components/home/home.component';
 import {ProfileComponent} from './components/profile/profile.component';
 import {MyprojectsComponent} from './components/myprojects/myprojects.component';
+import {ProjectComponent} from './components/project/project.component';
 
 /**
  * Defines all the routes of the application
@@ -21,7 +22,14 @@ const routes: Routes = [
     path: 'overview', component: OverviewComponent
   },
   {
-    path: 'myprojects', component: MyprojectsComponent
+    path: 'myprojects', component: MyprojectsComponent,
+    // children: [{
+    //   path: 'project',
+    //   component: ProjectComponent
+    // }],
+  },
+  {
+    path: 'project/:id', component: ProjectComponent
   },
   {
     path: 'login', component: LoginComponent

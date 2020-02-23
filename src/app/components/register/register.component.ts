@@ -9,7 +9,7 @@ export class RegisterComponent implements OnInit {
 
   constructor() { }
 
-  onRegister() {
+  private onRegister() {
 
   }
 
