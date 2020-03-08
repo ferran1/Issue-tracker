@@ -37,9 +37,9 @@
       <tbody>
       <tr *ngFor="let project of projects">
         <td routerLink="/project/{{project.id}}" (click)="selectProject(project)">{{ project.name }} </td>
-        <td (click)="selectProject(project)">{{ project.status }}</td>
-        <td (click)="selectProject(project)">{{ project.owner.email }}</td>
-        <td (click)="selectProject(project)">{{ amountOfMembers }}</td>
+        <td routerLink="/project/{{project.id}}" (click)="selectProject(project)">{{ project.status }}</td>
+        <td routerLink="/project/{{project.id}}" (click)="selectProject(project)">{{ project.owner.email }}</td>
+        <td routerLink="/project/{{project.id}}" (click)="selectProject(project)">{{ amountOfMembers }}</td>
       </tr>
       </tbody>
     </table>
@@ -75,7 +75,7 @@
               </select>
             </div>
             <div class="col-md-12">
-              <p class="invite-members">Invite members</p>
+              <p class="invite-members">Invite Members</p>
             </div>
             <div class="col-md-5">
               <input

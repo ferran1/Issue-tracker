@@ -1,1 +1,69 @@
-<p>project works!</p>
+<div class="container">
+
+  <div class="title-box">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="project-settings-title"> {{ selectedProject.name }} project settings </h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="col-md-12">
+      <form name="edit-project-form" #projectForm="ngForm">
+        <div class="row">
+        <div class="col-md-6">
+          <label for="projectName"> Project name </label>
+          <input
+            type="text"
+            name="projectName"
+            id="projectName"
+            [value]="selectedProject.name"
+            class="form-control input-sm"
+            required>
+        </div>
+        <div class="col-md-6">
+          <label for="projectStatus" id="surName-label">Project status </label>
+          <input
+            type="text"
+            name="projectStatus"
+            id="projectStatus"
+            class="form-control input-sm"
+            [value]="selectedProject.status"
+            required>
+        </div>
+        </div>
+      </form>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="sub-header-2">
+            Members
+          </p>
+        </div>
+        <div class="col-md-12">
+          <table class="table">
+            <thead>
+            <tr>
+              <th scope="col">Email</th>
+              <th scope="col">First name</th>
+              <th scope="col">Surname</th>
+              <th scope="col">Amount of projects</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let member of projectMembers">
+              <td>{{ member.email }} </td>
+              <td>{{ member.firstName }}</td>
+              <td>{{ member.surName }}</td>
+              <td>{{ member.projects.length }}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+

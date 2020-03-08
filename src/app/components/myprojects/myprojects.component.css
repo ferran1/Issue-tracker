@@ -36,6 +36,7 @@
 
 .invite-members {
   margin-top: 10px;
+  margin-bottom: 7px;
 }
 
 #create-project {
@@ -65,7 +66,6 @@ label {
 
 p {
   font-size: 14px;
-  font-weight: bold;
 }
 
 th {
@@ -75,4 +75,5 @@ th {
 td {
   font-size: 0.9rem;
   cursor: pointer;
+  outline: none;
 }

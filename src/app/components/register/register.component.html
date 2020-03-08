@@ -27,7 +27,7 @@
                   ngModel
                   required>
               </div>
-              <div style="color: red" [hidden]="email.valid || email.untouched">
+              <div style="color: red; font-size:0.9rem;" [hidden]="email.valid || email.untouched">
                 <div *ngIf="email.errors && email.errors.required">
                   <p><span>Email is required</span></p>
                 </div>
@@ -53,7 +53,7 @@
                   ngModel
                   required>
               </div>
-              <div style="color: red" *ngIf="!password.valid && password.touched">
+              <div style="color: red; font-size:0.9rem;" *ngIf="!password.valid && password.touched">
                 <p><span>Please enter a valid password (Password should contain at least 6 characters)</span></p>
               </div>
 
