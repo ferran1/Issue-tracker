@@ -1,6 +1,6 @@
 # Bug tracker
 
-Simple bug tracking webapp created in Angular 8 frontend and Spring boot backend
+Simple bug tracking webapp created in Angular 8 Spring boot 
 
 ## Development server
 
