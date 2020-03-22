@@ -1,69 +1,133 @@
+<app-add-member-popup *ngIf="addMemberToggle"
+                      (closingToggle)="onCloseReq()"
+                      ></app-add-member-popup> <!-- Open the "Add member" pop-up when the "Add new member" button has clicked -->
+<app-add-bug-popup *ngIf="addMemberToggle"
+                      (closingToggle)="onCloseReq()"
+></app-add-bug-popup>
+<!--<app-add-member-popup *ngIf="addMemberToggle"-->
+<!--                      (closingToggle)="onCloseReq()" [receivedSelectedOrg]="currentSelectedOrg"-->
+<!--                      (userAdded)="onAddedRequest($event)"></app-add-member-popup> &lt;!&ndash; Open the "Add member" pop-up when the "Add member" button has clicked &ndash;&gt;-->
 <div class="container">
 
   <div class="title-box">
     <div class="row">
       <div class="col-md-12">
-        <h1 class="project-settings-title"> {{ selectedProject.name }} project settings </h1>
+        <h1 class="title"> {{ selectedProject.name }} project settings </h1>
       </div>
     </div>
   </div>
 
   <div class="content">
-  <div class="row">
-    <div class="col-md-12">
-      <form name="edit-project-form" #projectForm="ngForm">
+    <div class="row">
+      <div class="col-md-12">
+        <form name="edit-project-form" #projectForm="ngForm">
+          <div class="row">
+            <div class="col-md-6">
+              <label for="projectName"> Project name </label>
+              <input
+                type="text"
+                name="projectName"
+                id="projectName"
+                [value]="selectedProject.name"
+                class="form-control input-sm"
+                required>
+            </div>
+            <div class="col-md-6">
+              <label for="projectStatus" id="surName-label">Project status </label>
+              <input
+                type="text"
+                name="projectStatus"
+                id="projectStatus"
+                class="form-control input-sm"
+                [value]="selectedProject.status"
+                required>
+            </div>
+          </div>
+        </form>
         <div class="row">
-        <div class="col-md-6">
-          <label for="projectName"> Project name </label>
-          <input
-            type="text"
-            name="projectName"
-            id="projectName"
-            [value]="selectedProject.name"
-            class="form-control input-sm"
-            required>
-        </div>
-        <div class="col-md-6">
-          <label for="projectStatus" id="surName-label">Project status </label>
-          <input
-            type="text"
-            name="projectStatus"
-            id="projectStatus"
-            class="form-control input-sm"
-            [value]="selectedProject.status"
-            required>
-        </div>
-        </div>
-      </form>
-      <div class="row">
-        <div class="col-md-12">
-          <p class="sub-header-2">
-            Members
-          </p>
-        </div>
-        <div class="col-md-12">
-          <table class="table">
-            <thead>
-            <tr>
-              <th scope="col">Email</th>
-              <th scope="col">First name</th>
-              <th scope="col">Surname</th>
-              <th scope="col">Amount of projects</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr *ngFor="let member of projectMembers">
-              <td>{{ member.email }} </td>
-              <td>{{ member.firstName }}</td>
-              <td>{{ member.surName }}</td>
-              <td>{{ member.projects.length }}</td>
-            </tr>
-            </tbody>
-          </table>
+          <div class="col-md-12">
+            <button type="button" class="main-button" id="add-member-button" data-toggle="modal"
+            data-target="#addMemberModal" (click)="onAddNewMember()">Add new member</button>
+            <table class="table">
+              <thead>
+              <tr>
+                <th scope="col">Email</th>
+                <th scope="col">First name</th>
+                <th scope="col">Surname</th>
+                <th scope="col">Amount of projects</th>
+                <th scope="col">Actions</th>
+                <th scope="col">Select</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let member of projectMembers">
+                <td>{{ member.email }} </td>
+                <td>{{ member.firstName }}</td>
+                <td>{{ member.surName }}</td>
+                <td>{{ member.projects.length }}</td>
+                <td>
+
+                  <button class="btn btn-sm btn-danger fa fa-trash mr-1" id="delete-member-button" aria-hidden="true"
+                          (click)="onDeleteMember(member)"></button>
+                </td>
+                <td>
+                  <input type="checkbox" id="selectedMember" name="selectedMember">
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-12">
+            <form name="send-mail-form" #sendMailForm="ngForm">
+              <div class="form-group">
+                <label for="editor">Member selected: </label> <b style="font-size: 0.9rem;">3</b>
+                <textarea class="form-control" name="sendmailtextarea" id="editor" rows="3"> </textarea>
+                <script type="text/javascript">
+                  jQuery(document).ready(function () {
+                    CKEDITOR.replace('editor');
+                  });
+                </script>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-12">
+            <button type="button" class="main-button" id="add-bug-button" data-toggle="modal"
+                    data-target="#addBugModal" (click)="onAddNewBug()">Add new bug</button>
+            <button type="button" class="main-button" id="send-button"> Send mail</button>
+          </div>
+            <div class="col-md-12">
+              <h1 class="title"> Project bugs </h1>
+            </div>
+            <div class="col-md-12">
+              <table class="table">
+                <thead>
+                <tr>
+                  <th scope="col">Title</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Assigned members</th>
+                  <th scope="col">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let bug of projectBugs">
+                  <td>{{ bug.title }} </td>
+                  <td>{{ bug.description }}</td>
+                  <div *ngFor="let user of bug.assignedMembers">
+                  <td >{{ user.email }}</td>
+                  </div>
+                  <td>
+                    <button class="btn btn-sm btn-dark fa far fa-edit" id="edit-bug-button" aria-hidden="true"
+                            (click)="onDeleteBug(bug)"></button>
+                    <button class="btn btn-sm btn-danger fa fa-trash mr-1" id="delete-bug-button" aria-hidden="true"
+                            (click)="onDeleteBug(bug)"></button>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
         </div>
       </div>
     </div>
-  </div>
   </div>
 </div>
 

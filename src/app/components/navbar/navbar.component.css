@@ -10,16 +10,6 @@
   font-size: 19px;
 }
 
-span#navText {
-  outline: none;
-  cursor: pointer;
-}
-
-/* Dropdown item styles */
-a.dropdown-item {
-  cursor: pointer;
-}
-
 .dropdown-item.active, .dropdown-item:active {
   background-color: #C2BEBE;
 }
@@ -33,6 +23,25 @@ a.dropdown-item {
   margin-right: 4px;
 }
 
+span#navText {
+  outline: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+a.nav-link {
+  font-size: 15px;
+}
+
+/* Dropdown item styles */
+a.dropdown-item {
+  cursor: pointer;
+}
+
 div#navbarSupportedContent {
   transition: 0.5s !important;
+}
+
+b {
+  font-size: 15px;
 }

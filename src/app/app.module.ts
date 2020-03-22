@@ -14,6 +14,8 @@ import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { MyprojectsComponent } from './components/myprojects/myprojects.component';
 import { ProjectComponent } from './components/project/project.component';
+import { AddMemberPopupComponent } from './components/add-member-popup/add-member-popup.component';
+import { AddBugPopupComponent } from './components/add-bug-popup/add-bug-popup.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { ProjectComponent } from './components/project/project.component';
     ProfileComponent,
     MyprojectsComponent,
     ProjectComponent,
+    AddMemberPopupComponent,
+    AddBugPopupComponent,
   ],
   imports: [
     BrowserModule,
