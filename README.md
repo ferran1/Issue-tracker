@@ -1,6 +1,6 @@
-# IssueTracker
+# Bug tracker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.24.
+Bug tracking software created in Angular 8 frontend and Spring boot backend. 
 
 ## Development server
 
