@@ -1,6 +1,6 @@
 # Bug tracker
 
-An uncomplicated, web-based bug tracking system created in Angular 8 and Spring Boot 
+An uncomplicated, bug tracking webapp created in Angular 8 and Spring Boot 
 
 ## Development server
 
