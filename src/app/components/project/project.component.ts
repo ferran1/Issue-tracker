@@ -3,6 +3,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {Project, Status} from '../../models/project';
 import {User} from '../../models/user';
 import {Bug} from '../../models/bug';
+import {UserService} from '../../services/user.service';
 
 @Component({
   selector: 'app-project',
@@ -19,16 +20,16 @@ export class ProjectComponent implements OnInit {
   public addBugToggle: boolean;
 
   constructor(private router: Router,
-              public route: ActivatedRoute) {
+              public route: ActivatedRoute, private userService: UserService) {
     this.addMemberToggle = false;
     this.addBugToggle = false;
   }
 
-  onDeleteMember(member: User) {
+  public onDeleteMember(member: User) {
 
   }
 
-  onDeleteBug(bug: Bug) {
+  public onDeleteBug(bug: Bug) {
 
   }
 
@@ -49,12 +50,7 @@ export class ProjectComponent implements OnInit {
 
     this.selectedProject = new Project("Test2", new User("Test@gmail.com", "test", "Maarten" , "de Boer" , false), Status.ACTIVE, new Date());
 
-    let project1 = new Project("Test1", new User("Test@gmail.com",  "test", "Johnny", "Petron", false), Status.ACTIVE, new Date());
-    let project2 = new Project("Test2z", new User("Test@gmail.com", "test", "Maarten" , "de Boer" , false), Status.ACTIVE, new Date());
-    let projects = [project1, project2];
-    this.projectMembers = [];
-    this.projectMembers[0] = new User("david@company.com", "test", "David", "Smith" ,false, projects);
-    this.projectMembers[1] = new User("jason@company.com", "test", "Jason", "Lewis" ,true, projects);
+    this.projectMembers = this.userService.getAllUsers();
 
     this.projectBugs = [];
     this.projectBugs[0] = new Bug("Login failure", "Backend login request failing", this.projectMembers);

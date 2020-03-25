@@ -16,6 +16,7 @@ import { MyprojectsComponent } from './components/myprojects/myprojects.componen
 import { ProjectComponent } from './components/project/project.component';
 import { AddMemberPopupComponent } from './components/add-member-popup/add-member-popup.component';
 import { AddBugPopupComponent } from './components/add-bug-popup/add-bug-popup.component';
+import {UserFilterPipe} from './pipes/user-filter-pipe';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { AddBugPopupComponent } from './components/add-bug-popup/add-bug-popup.c
     ProjectComponent,
     AddMemberPopupComponent,
     AddBugPopupComponent,
+    UserFilterPipe
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,8 @@
 <app-add-member-popup *ngIf="addMemberToggle"
-                      (closingToggle)="onCloseReq()"
-                      ></app-add-member-popup> <!-- Open the "Add member" pop-up when the "Add new member" button has clicked -->
+                      (closingToggle)="onCloseReq()" [receivedProject]="selectedProject">
+                      </app-add-member-popup>
 <app-add-bug-popup *ngIf="addBugToggle"
-                      (closingToggle)="onCloseReq()"
+                      (closingToggle)="onCloseReq()" [receivedProject]="selectedProject"
 ></app-add-bug-popup>
 <!--<app-add-member-popup *ngIf="addMemberToggle"-->
 <!--                      (closingToggle)="onCloseReq()" [receivedSelectedOrg]="currentSelectedOrg"-->
@@ -16,6 +16,7 @@
       </div>
     </div>
   </div>
+
 
   <div class="content">
     <div class="row">
