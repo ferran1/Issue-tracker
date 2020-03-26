@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Project, Status} from '../../models/project';
 import {User} from '../../models/user';
-import {Bug} from '../../models/bug';
+import {Bug, BugSeverity} from '../../models/bug';
 import {UserService} from '../../services/user.service';
 
 @Component({
@@ -53,7 +53,7 @@ export class ProjectComponent implements OnInit {
     this.projectMembers = this.userService.getAllUsers();
 
     this.projectBugs = [];
-    this.projectBugs[0] = new Bug("Login failure", "Backend login request failing", this.projectMembers);
-    this.projectBugs[1] = new Bug("Frontend bug", "Frontend homepage bug", this.projectMembers);
+    this.projectBugs[0] = new Bug("Login failure", "Backend login request failing", BugSeverity.CRITICAL,this.projectMembers);
+    this.projectBugs[1] = new Bug("Frontend bug", "Frontend homepage bug", BugSeverity.MINOR, this.projectMembers);
   }
 }

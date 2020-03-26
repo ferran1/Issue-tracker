@@ -14,16 +14,18 @@ export class Bug {
   private _id: number;
   private _title: string;
   private _description: string;
+  private _severity: string;
   private _assignedMembers?: User[] = [];
 
-  constructor(title: string, description: string, assignedMembers: User[]) {
+  constructor(title: string, description: string, severity: string, assignedMembers: User[]) {
     this._title = title;
     this._description = description;
+    this.severity = severity;
     this._assignedMembers = assignedMembers;
   }
 
   get id(): number {
-    return this._id;
+    return this._id;e
   }
 
   set id(value: number) {
@@ -44,6 +46,14 @@ export class Bug {
 
   set description(value: string) {
     this._description = value;
+  }
+
+  get severity(): string {
+    return this._severity;
+  }
+
+  set severity(value: string) {
+    this._severity = value;
   }
 
   get assignedMembers(): User[] {

@@ -105,6 +105,7 @@
                 <tr>
                   <th scope="col">Title</th>
                   <th scope="col">Description</th>
+                  <th scope="col">Bug severity</th>
                   <th scope="col">Assigned members</th>
                   <th scope="col">Actions</th>
                 </tr>
@@ -113,6 +114,7 @@
                 <tr *ngFor="let bug of projectBugs">
                   <td>{{ bug.title }} </td>
                   <td>{{ bug.description }}</td>
+                  <td>{{ bug.severity }}</td>
                   <div *ngFor="let user of bug.assignedMembers">
                   <td >{{ user.email }}</td>
                   </div>

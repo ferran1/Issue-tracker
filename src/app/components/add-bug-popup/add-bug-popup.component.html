@@ -12,7 +12,7 @@
       <div class="modal-body">
         <form name="form" #formElement="ngForm" (ngSubmit)="onAddBug()">
           <label for="title" class="form-label">Title</label>
-          <div class="input-group mb-3">
+          <div class="input-group mb-4">
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="icon-user"></i></span>
             </div>
@@ -24,22 +24,44 @@
               placeholder="Bug title"
               required>
           </div>
-          <label for="Password" class="form-label">Password</label>
+          <label for="description" class="form-label">Description</label>
           <div class="input-group mb-4">
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="icon-lock"></i></span>
             </div>
             <input
-              type="password"
-              name="Password"
-              id="Password"
+              type="text"
+              name="Description"
+              id="description"
               class="form-control"
-              placeholder="Password"
+              placeholder="Bug description"
               required>
           </div>
+          <label for="severity" class="form-label">Severity</label>
+          <div class="input-group mb-4">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="icon-lock"></i></span>
+            </div>
+            <select name="severity" id="severity" class="custom-select" style="cursor: pointer"
+                    [(ngModel)]="this.selectedSeverity">
+              <option *ngFor="let severity of keyValueArray" [ngValue]="selectedSeverity">
+                {{severity.key}}</option>
+            </select>
+          </div>
+          <label for="severity" class="form-label">Assign project members</label>
+          <div class="input-group mb-4">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="icon-lock"></i></span>
+            </div>
+            <select name="assignMembers" id="assignMembers" class="custom-select" style="cursor: pointer"
+             multiple>
+              <option *ngFor="let member of receivedProject.members">
+                {{member.email}}
+              </option>
+            </select>
+          </div>
 
-          <button class="main-button float-right px-4">Log in</button>
-          <button type="button" routerLink="/forgot-password" id="forgot-password" class="btn btn-link px-0">Forgot password?</button>
+          <button class="main-button float-right px-4">Add bug</button>
         </form>
       </div>
     </div>

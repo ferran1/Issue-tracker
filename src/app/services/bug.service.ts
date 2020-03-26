@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Project, Status} from '../models/project';
 import {User} from '../models/user';
-import {Bug} from '../models/bug';
+import {Bug, BugSeverity} from '../models/bug';
 import {ProjectService} from './project.service';
 
 @Injectable({
@@ -54,7 +54,6 @@ export class BugService {
     users[0] = new User("david@company.com", "test", "David", "Smith" ,false, projects);
     users[1] = new User("jason@company.com", "test", "Jason", "Lewis" ,true, projects);
 
-
-    return [new Bug("Backend login request error", "API call failed", users), new Bug("Javascript pop-up failed", "Javascript pop-up not working properly", users)];
+    return [new Bug("Backend login request error", "API call failed", BugSeverity.CRITICAL ,users), new Bug("Javascript pop-up failed", "Javascript pop-up not working properly", BugSeverity.MINOR ,users)];
   }
 }

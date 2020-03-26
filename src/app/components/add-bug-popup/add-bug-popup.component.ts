@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Project} from '../../models/project';
+import {BugSeverity} from '../../models/bug';
 
 @Component({
   selector: 'app-add-bug-popup',
@@ -12,9 +13,12 @@ export class AddBugPopupComponent implements OnInit {
   @Input() receivedProject: Project;
 
   private errorMessage;
+  private selectedSeverity: string;
+  private keyValueArray;
 
   constructor() {
     this.closingToggle = new EventEmitter<boolean>();
+    this.keyValueArray = [];
   }
 
   private onAddBug(){
@@ -22,6 +26,8 @@ export class AddBugPopupComponent implements OnInit {
   }
 
   ngOnInit() {
+    // fill the severity array
+    this.keyValueArray  = Object.keys(BugSeverity).map(k => ({key: k, value: BugSeverity[k as any]}));
   }
 
 }
